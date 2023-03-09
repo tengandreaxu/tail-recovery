@@ -1,0 +1,63 @@
+#**********
+# Change the paths accordingly
+#**********
+
+DATASET=
+DATASET_SMALL=
+
+GRIDS_FULL=${DATASET}grids
+GRIDS_SMALL=${DATASET_SMALL}grids
+
+RES_DIR=
+RES_FOLDER=paper/res_paper
+
+FOLDER_RAW_OPTION=
+FOLDER_RAW_OPTION_SMALL=
+FOLDER_DATASET=${DATASET}/grids/
+FOLDER_DATASET_SMALL=
+
+POSITIVE_5_DAYS=lag=True_horizon=5_earnings=True_moneyness=otm_atm_only_std=2.0_data=tickers_final_full_options=all_iv_type=all/
+NEGATIVE_5_DAYS=lag=True_horizon=5_earnings=True_moneyness=otm_atm_only_std=-2.0_data=tickers_final_full_options=all_iv_type=all/
+NEGATIVE_5_DAYS_SMALL=lag=True_horizon=5_earnings=True_moneyness=otm_atm_only_std=-2.0_data=tickers_final_small_options=all_iv_type=all/
+
+NEG_CALL_ONLY=lag=True_horizon=5_earnings=True_moneyness=otm_atm_only_std=-2.0_data=tickers_final_full_options=call_only_iv_type=all
+NEG_PUT_ONLY=lag=True_horizon=5_earnings=True_moneyness=otm_atm_only_std=-2.0_data=tickers_final_full_options=put_only_iv_type=all
+
+POS_CALL_ONLY=lag=True_horizon=5_earnings=True_moneyness=otm_atm_only_std=2.0_data=tickers_final_full_options=call_only_iv_type=all
+POS_PUT_ONLY=lag=True_horizon=5_earnings=True_moneyness=otm_atm_only_std=2.0_data=tickers_final_full_options=put_only_iv_type=all
+
+NEG_CALL_OTM_ONLY=lag=True_horizon=5_earnings=True_moneyness=otm_only_std=-2.0_data=tickers_final_full_options=call_only_iv_type=all
+NEG_PUT_OTM_ONLY=lag=True_horizon=5_earnings=True_moneyness=otm_only_std=-2.0_data=tickers_final_full_options=put_only_iv_type=all
+NEG_BOTH_OTM_ONLY=lag=True_horizon=5_earnings=True_moneyness=otm_only_std=-2.0_data=tickers_final_full_options=all_iv_type=all
+
+POS_CALL_OTM_ONLY=lag=True_horizon=5_earnings=True_moneyness=otm_only_std=2.0_data=tickers_final_full_options=call_only_iv_type=all
+POS_PUT_OTM_ONLY=lag=True_horizon=5_earnings=True_moneyness=otm_only_std=2.0_data=tickers_final_full_options=put_only_iv_type=all
+POS_BOTH_OTM_ONLY=lag=True_horizon=5_earnings=True_moneyness=otm_only_std=2.0_data=tickers_final_full_options=all_iv_type=all
+
+
+FOLDER_POSITIVE_5_DAYS=${RES_DIR}${POSITIVE_5_DAYS}
+FOLDER_NEGATIVE_5_DAYS=${RES_DIR}${NEGATIVE_5_DAYS}
+
+FOLDER_NEGATIVE_5_DAYS_SMALL=${RES_DIR}${NEGATIVE_5_DAYS_SMALL}
+
+FOLDER_FULL_PREDICTIONS=rolling_pred_from_saved_nnet/
+
+FILE_EARNINGS=orats_earnings.csv
+FILE_DIVIDENDS=orats_dividends.csv
+FILE_PRICE_HISTORY=orats_price_history.csv
+FILE_BDAYS=business_days_to_maturity.csv
+FILE_BIG_TICKERS_SET=tickers_used_for_training.csv
+FILE_TRAIN_TICKER=${FOLDER_RAW_OPTION}/grids/X_train/train_ticker.p
+
+
+MSE_VOLA=8
+GAUSSIAN_MIXTURE=1
+
+
+BENCH_DATA=bench_data
+export RES_DIR
+export GRIDS_FULL
+export BENCH_DATA
+export RES_FOLDER
+export POSITIVE_5_DAYS
+export NEGATIVE_5_DAYS
